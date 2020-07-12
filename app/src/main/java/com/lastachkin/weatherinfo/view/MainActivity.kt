@@ -10,13 +10,12 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), MainView {
 
-    private var mPresenter: MainPresenter? = null
+    private var mPresenter = MainPresenterImpl(this)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        mPresenter = MainPresenterImpl(this)
+        mPresenter.fetchWeather()
     }
 
     override fun showWeather(weather: WeatherModel) {

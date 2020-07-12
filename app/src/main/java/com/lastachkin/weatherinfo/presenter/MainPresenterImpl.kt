@@ -1,22 +1,17 @@
 package com.lastachkin.weatherinfo.presenter
 
-import com.lastachkin.weatherinfo.WeatherRepository
-import com.lastachkin.weatherinfo.WeatherRepositoryImpl
+import com.lastachkin.weatherinfo.repository.WeatherRepositoryImpl
 import com.lastachkin.weatherinfo.model.WeatherModel
 import com.lastachkin.weatherinfo.view.MainView
 
-class MainPresenterImpl(private val mView: MainView) :  MainPresenter, WeatherRepositoryImpl.OnWeatherFetchedListener {
+class MainPresenterImpl(private val mView: MainView) :  MainPresenter {
+    private val mRepository = WeatherRepositoryImpl(this)
 
-    private val mRepository: WeatherRepository
-    private var currentWeather: WeatherModel?  = null
-
-    init {
-        mRepository = WeatherRepositoryImpl(this)
-        mRepository.getWeather()
+    override fun onWeatherFetched(model: WeatherModel?) {
+       model?.let { mView.showWeather(it) }
     }
 
-    override fun showWeather(weather: WeatherModel) {
-        currentWeather = weather
-        mView.showWeather(currentWeather!!)
+    override fun fetchWeather() {
+        mRepository.getWeather()
     }
 }

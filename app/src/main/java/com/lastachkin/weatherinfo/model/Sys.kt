@@ -1,24 +1,22 @@
 package com.lastachkin.weatherinfo.model
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class Sys {
 
     @SerializedName("type")
-    @Expose
-    var type: Int? = null
+    var type: Int = 0
+
     @SerializedName("id")
-    @Expose
-    var id: Int? = null
+    var id: Int = 0
+
     @SerializedName("country")
-    @Expose
-    var country: String? = null
+    var country: String = ""
+
     @SerializedName("sunrise")
-    @Expose
-    var sunrise: Int? = null
+    var sunrise: Int = 0
+
     @SerializedName("sunset")
-    @Expose
-    var sunset: Int? = null
+    var sunset: Int = 0
 
 }

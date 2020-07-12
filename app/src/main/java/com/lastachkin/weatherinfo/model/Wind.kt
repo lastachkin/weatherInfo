@@ -1,18 +1,16 @@
 package com.lastachkin.weatherinfo.model
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class Wind {
 
     @SerializedName("speed")
-    @Expose
-    var speed: Int? = null
+    var speed: Int = 0
+
     @SerializedName("deg")
-    @Expose
-    var deg: Int? = null
+    var deg: Int = 0
+
     @SerializedName("gust")
-    @Expose
-    var gust: Int? = null
+    var gust: Int = 0
 
 }

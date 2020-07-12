@@ -1,15 +1,13 @@
 package com.lastachkin.weatherinfo.model
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class Coord {
 
     @SerializedName("lon")
-    @Expose
-    var lon: Double? = null
+    var lon: Double = 0.0
+
     @SerializedName("lat")
-    @Expose
-    var lat: Double? = null
+    var lat: Double = 0.0
 
 }

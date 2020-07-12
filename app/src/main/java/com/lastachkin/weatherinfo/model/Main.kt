@@ -1,27 +1,25 @@
 package com.lastachkin.weatherinfo.model
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class Main {
 
     @SerializedName("temp")
-    @Expose
-    var temp: Double? = null
+    var temp: Double = 0.0
+
     @SerializedName("feels_like")
-    @Expose
-    var feelsLike: Double? = null
+    var feelsLike: Double = 0.0
+
     @SerializedName("temp_min")
-    @Expose
-    var tempMin: Double? = null
+    var tempMin: Double = 0.0
+
     @SerializedName("temp_max")
-    @Expose
-    var tempMax: Double? = null
+    var tempMax: Double = 0.0
+
     @SerializedName("pressure")
-    @Expose
-    var pressure: Int? = null
+    var pressure: Int = 0
+
     @SerializedName("humidity")
-    @Expose
-    var humidity: Int? = null
+    var humidity: Int = 0
 
 }

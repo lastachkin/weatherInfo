@@ -1,48 +1,46 @@
 package com.lastachkin.weatherinfo.model
 
-import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
 
 class WeatherModel {
 
     @SerializedName("coord")
-    @Expose
     var coord: Coord? = null
+
     @SerializedName("weather")
-    @Expose
     var weather: List<Weather>? = null
+
     @SerializedName("base")
-    @Expose
-    var base: String? = null
+    var base: String = ""
+
     @SerializedName("main")
-    @Expose
     var main: Main? = null
+
     @SerializedName("visibility")
-    @Expose
-    var visibility: Int? = null
+    var visibility: Int = 0
+
     @SerializedName("wind")
-    @Expose
     var wind: Wind? = null
+
     @SerializedName("clouds")
-    @Expose
     var clouds: Clouds? = null
+
     @SerializedName("dt")
-    @Expose
-    var dt: Int? = null
+    var dt: Int = 0
+
     @SerializedName("sys")
-    @Expose
     var sys: Sys? = null
+
     @SerializedName("timezone")
-    @Expose
-    var timezone: Int? = null
+    var timezone: Int = 0
+
     @SerializedName("id")
-    @Expose
-    var id: Int? = null
+    var id: Int = 0
+
     @SerializedName("name")
-    @Expose
-    var name: String? = null
+    var name: String = ""
+
     @SerializedName("cod")
-    @Expose
-    var cod: Int? = null
+    var cod: Int = 0
 
 }
